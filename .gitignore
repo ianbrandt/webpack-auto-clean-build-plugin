@@ -38,7 +38,5 @@ jspm_packages
 
 .idea/workspace.xml
 .idea/dictionaries
-.idea/misc.xml
 .idea/compiler.xml
-.idea/vcs.xml
 .idea/uiDesigner.xml
