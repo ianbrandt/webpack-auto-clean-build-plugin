@@ -1,5 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
-var Plugin = require('../index.js')
+'use strict';
 
+var path = require('path');
+var webpack = require('webpack');
+var Plugin = require('../index.js');
 

@@ -10,9 +10,11 @@
 var fs = require("fs");
 var path = require("path");
 
+/**
+ * @constructor
+ */
 function WebpackAutoCleanBuildPlugin() {
 
-	this.previousFiles = {};
 }
 
 WebpackAutoCleanBuildPlugin.prototype.apply = function (compiler) {
