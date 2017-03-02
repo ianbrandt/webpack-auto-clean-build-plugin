@@ -12,10 +12,15 @@
   },
   "keywords": [
     "webpack",
+    "plugin",
     "watch",
     "clean",
     "build"
   ],
   "author": "Daniel Ennis <aikar@aikar.co>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aikar/webpack-auto-clean-build-plugin/issues"
+  },
+  "homepage": "https://github.com/aikar/webpack-auto-clean-build-plugin"
 }
