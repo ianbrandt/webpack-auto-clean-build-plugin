@@ -4,6 +4,11 @@
   "description": "Automatically removes previous chunk output files if the filename is not same as the new output file name.",
   "main": "index.js",
   "scripts": {
+    "clean-modules": "rm -rf node_modules/",
+    "install-modules": "npm install",
+    "check": "npm-check",
+    "update": "npm-check -u --save-exact --skip-unused",
+    "standard": "standard",
     "test": "standard && mocha test"
   },
   "repository": {
@@ -24,16 +29,17 @@
   },
   "homepage": "https://github.com/aikar/webpack-auto-clean-build-plugin",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "dirty-chai": "^1.2.2",
-    "eslint-config-standard": "^7.0.0",
-    "eslint-config-standard-jsx": "^3.3.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^6.10.0",
-    "eslint-plugin-standard": "^2.1.1",
-    "mocha": "^3.2.0",
-    "standard": "^9.0.0",
-    "webpack": "^2.2.1"
+    "chai": "3.5.0",
+    "dirty-chai": "1.2.2",
+    "eslint-config-standard": "7.0.0",
+    "eslint-config-standard-jsx": "3.3.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "6.10.0",
+    "eslint-plugin-standard": "2.1.1",
+    "mocha": "3.2.0",
+    "npm-check": "5.4.0",
+    "standard": "9.0.0",
+    "webpack": "2.2.1"
   },
   "dependencies": {
     "fs-extra": "^2.0.0"
