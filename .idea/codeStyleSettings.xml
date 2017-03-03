@@ -45,9 +45,8 @@
         </codeStyleSettings>
         <codeStyleSettings language="JSON">
           <indentOptions>
-            <option name="INDENT_SIZE" value="4" />
-            <option name="USE_TAB_CHARACTER" value="true" />
-            <option name="SMART_TABS" value="true" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="2" />
           </indentOptions>
         </codeStyleSettings>
         <codeStyleSettings language="JavaScript">
@@ -70,6 +69,5 @@
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Project Scheme" />
   </component>
 </project>
