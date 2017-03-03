@@ -12,9 +12,10 @@
  */
 function WebpackAutoCleanBuildPlugin () { }
 
+// noinspection JSUnusedGlobalSymbols
 WebpackAutoCleanBuildPlugin.prototype.apply = function (compiler) {
   compiler.plugin('emit', function (compilation, callback) {
-    console.log('WebpackAutoCleanBuildPlugin invoked!')
+    console.log('[debug] AutoCleanBuildPlugin invoked!')
     callback()
   })
 }

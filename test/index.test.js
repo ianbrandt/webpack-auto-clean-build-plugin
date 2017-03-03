@@ -2,20 +2,20 @@
 
 'use strict'
 
-var chai = require('chai');
-var dirtyChai = require('dirty-chai');
+var chai = require('chai')
+var dirtyChai = require('dirty-chai')
 var expect = require('chai').expect
 var fse = require('fs-extra')
 var path = require('path')
 var webpack = require('webpack')
 
-var Plugin = require('../index.js')
+var AutoCleanBuildPlugin = require('../index.js')
 
 var OUTPUT_DIR = path.join(__dirname, '../tmp')
 
 chai.use(dirtyChai)
 
-describe('Plugin', function () {
+describe('AutoCleanBuildPlugin', function () {
   beforeEach(function (done) {
     fse.removeSync(OUTPUT_DIR)
     done()
@@ -29,7 +29,7 @@ describe('Plugin', function () {
         filename: '[name]-[chunkhash].js'
       },
       plugins: [
-        new Plugin()
+        new AutoCleanBuildPlugin()
       ]
     }
 
