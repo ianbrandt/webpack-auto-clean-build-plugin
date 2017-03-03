@@ -1,55 +1,54 @@
-'use strict';
+/* eslint-env mocha */
 
-var expect = require('chai').expect;
-var fs = require('fs');
-var mkdirp = require('mkdirp');
-var path = require('path');
-var rmRf = require('rimraf');
-var webpack = require('webpack');
+'use strict'
 
-var Plugin = require('../index.js');
+var chai = require('chai');
+var dirtyChai = require('dirty-chai');
+var expect = require('chai').expect
+var fse = require('fs-extra')
+var path = require('path')
+var webpack = require('webpack')
 
-var OUTPUT_DIR = path.join(__dirname, '../tmp');
+var Plugin = require('../index.js')
+
+var OUTPUT_DIR = path.join(__dirname, '../tmp')
+
+chai.use(dirtyChai)
 
 describe('Plugin', function () {
+  beforeEach(function (done) {
+    fse.removeSync(OUTPUT_DIR)
+    done()
+  })
 
-	beforeEach(function (done) {
+  it('invokes without error', function (done) {
+    var webpackConfig = {
+      entry: path.join(__dirname, 'fixtures/main.js'),
+      output: {
+        path: OUTPUT_DIR,
+        filename: '[name]-[chunkhash].js'
+      },
+      plugins: [
+        new Plugin()
+      ]
+    }
 
-		rmRf(OUTPUT_DIR, done)
-	});
+    fse.mkdirsSync(OUTPUT_DIR)
 
-	it('is invoked without error', function (done) {
+    webpack(webpackConfig, function (err, stats) {
+      expect(err).to.be.null()
 
-		var webpackConfig = {
-			entry: path.join(__dirname, 'fixtures/main.js'),
-			output: {
-				path: OUTPUT_DIR,
-				filename: '[name]-[chunkhash].js'
-			},
-			plugins: [
-				new Plugin()
-			]
-		};
+      expect(stats.hasErrors()).to.be.false()
 
-		mkdirp(OUTPUT_DIR, function (err) {
+      fse.readdir(OUTPUT_DIR, function (err, files) {
+        expect(err).to.be.null()
 
-			expect(err).to.be.null;
+        expect(files).to.have.lengthOf(1)
 
-			webpack(webpackConfig, function (err, stats) {
+        expect(files[0]).to.match(/^main-.*\.js/)
+      })
 
-				expect(err).to.be.null;
-				expect(stats.hasErrors()).to.be.false;
-
-				fs.readdir(OUTPUT_DIR, function (err, files) {
-
-					files.forEach(function (file) {
-
-						console.log(file);
-					});
-				});
-
-				done()
-			})
-		})
-	});
-});
+      done()
+    })
+  })
+})

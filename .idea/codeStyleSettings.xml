@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <option name="AUTODETECT_INDENTS" value="false" />
+        <option name="OTHER_INDENT_OPTIONS">
+          <value>
+            <option name="INDENT_SIZE" value="4" />
+            <option name="CONTINUATION_INDENT_SIZE" value="8" />
+            <option name="TAB_SIZE" value="4" />
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+            <option name="LABEL_INDENT_SIZE" value="0" />
+            <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+            <option name="USE_RELATIVE_INDENTS" value="false" />
+          </value>
+        </option>
+        <option name="LINE_SEPARATOR" value="&#10;" />
+        <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
+        <JSCodeStyleSettings>
+          <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
+          <option name="USE_DOUBLE_QUOTES" value="false" />
+        </JSCodeStyleSettings>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+        <codeStyleSettings language="Groovy">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="HTML">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="JAVA">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="JSON">
+          <indentOptions>
+            <option name="INDENT_SIZE" value="4" />
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="JavaScript">
+          <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+          <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
+          <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+          <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+          <indentOptions>
+            <option name="INDENT_SIZE" value="2" />
+            <option name="CONTINUATION_INDENT_SIZE" value="2" />
+            <option name="TAB_SIZE" value="2" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="XML">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+      </value>
+    </option>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Project Scheme" />
+  </component>
+</project>

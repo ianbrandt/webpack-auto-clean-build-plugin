@@ -10,19 +10,13 @@
 /**
  * @constructor
  */
-function WebpackAutoCleanBuildPlugin() {
-
-}
+function WebpackAutoCleanBuildPlugin () { }
 
 WebpackAutoCleanBuildPlugin.prototype.apply = function (compiler) {
+  compiler.plugin('emit', function (compilation, callback) {
+    console.log('WebpackAutoCleanBuildPlugin invoked!')
+    callback()
+  })
+}
 
-	compiler.plugin('emit', function (compilation, callback) {
-
-		console.log("WebpackAutoCleanBuildPlugin invoked!");
-
-		callback();
-
-	}.bind(this));
-};
-
-module.exports = WebpackAutoCleanBuildPlugin;
+module.exports = WebpackAutoCleanBuildPlugin
