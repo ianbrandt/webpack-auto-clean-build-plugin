@@ -15,7 +15,7 @@ This plugin does not handle the initial clean. You should still use something li
 ## Setup
 
 ```javascript
-var AutoCleanBuildPlugin = require('webpack-auto-clean-build-plugin');
+var AutoCleanBuildPlugin = require('webpack-auto-clean-build-plugin')
 ```
 
 then in 
