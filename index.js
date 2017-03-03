@@ -7,9 +7,6 @@
  *
  */
 
-var fs = require("fs");
-var path = require("path");
-
 /**
  * @constructor
  */
@@ -19,17 +16,9 @@ function WebpackAutoCleanBuildPlugin() {
 
 WebpackAutoCleanBuildPlugin.prototype.apply = function (compiler) {
 
-	compiler.plugin('emit', function(compilation, callback) {
+	compiler.plugin('emit', function (compilation, callback) {
 
-		var changedChunks = compilation.chunks.filter(function(chunk) {
-
-			var oldVersion = this.chunkVersions[chunk.name];
-
-			this.chunkVersions[chunk.name] = chunk.hash;
-
-			return chunk.hash !== oldVersion;
-
-		}.bind(this));
+		console.log("WebpackAutoCleanBuildPlugin invoked!");
 
 		callback();
 

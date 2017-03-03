@@ -24,7 +24,10 @@
   },
   "homepage": "https://github.com/aikar/webpack-auto-clean-build-plugin",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
+    "rimraf": "^2.6.1",
     "webpack": "^2.2.1"
   }
 }
