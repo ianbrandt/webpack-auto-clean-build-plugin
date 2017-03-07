@@ -24,10 +24,10 @@
     "fs-extra": "^2.0.0"
   },
   "scripts": {
-    "clean-modules": "rm -rf node_modules/",
     "install-modules": "npm install",
-    "check": "npm-check",
-    "update": "npm-check -u --save-exact --skip-unused",
+    "check-modules": "npm-check",
+    "update-modules": "npm-check -u --save-exact --skip-unused",
+    "clean-modules": "rm -rf node_modules/",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "prebuild": "npm run lint",
     "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
