@@ -27,12 +27,13 @@
     "install-modules": "npm install",
     "check-modules": "npm-check",
     "update-modules": "npm-check -u --save-exact --skip-unused",
-    "clean-modules": "rm -rf node_modules/",
+    "clean-modules": "rimraf node_modules/",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "prebuild": "npm run lint",
     "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
     "pretest": "npm run build",
-    "test": "mocha test_dist/"
+    "test": "mocha test_dist/",
+    "clean": "rimraf dist/ test_dist/ test_output"
   },
   "devDependencies": {
     "babel-cli": "6.23.0",
@@ -44,6 +45,7 @@
     "eslint-plugin-standard": "2.1.1",
     "mocha": "3.2.0",
     "npm-check": "5.4.0",
+    "rimraf": "2.6.1",
     "standard": "9.0.1",
     "webpack": "2.2.1"
   }
