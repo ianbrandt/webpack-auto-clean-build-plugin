@@ -2,16 +2,16 @@
 
 'use strict'
 
-import chai from 'chai'
-import dirtyChai from 'dirty-chai'
-import fse from 'fs-extra'
-import path from 'path'
-import webpack from 'webpack'
-import AutoCleanBuildPlugin from '../index.js'
+const chai = require('chai')
+const dirtyChai = require('dirty-chai')
+const expect = require('chai').expect
+const fse = require('fs-extra')
+const path = require('path')
+const webpack = require('webpack')
 
-const expect = chai.expect
 chai.use(dirtyChai)
 
+const AutoCleanBuildPlugin = require('../index.js')
 const OUTPUT_DIR = path.join(__dirname, '../tmp')
 
 describe('AutoCleanBuildPlugin', function () {
