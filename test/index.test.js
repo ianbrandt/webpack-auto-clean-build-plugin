@@ -1,18 +1,17 @@
 /* eslint-env mocha */
-
 'use strict'
 
-const chai = require('chai')
-const dirtyChai = require('dirty-chai')
-const expect = require('chai').expect
-const fse = require('fs-extra')
-const path = require('path')
-const webpack = require('webpack')
+import chai, {expect} from 'chai'
+import dirtyChai from 'dirty-chai'
+import fse from 'fs-extra'
+import path from 'path'
+import webpack from 'webpack'
+import AutoCleanBuildPlugin from '../src/index'
 
 chai.use(dirtyChai)
 
-const AutoCleanBuildPlugin = require('../index.js')
-const OUTPUT_DIR = path.join(__dirname, '../tmp')
+const OUTPUT_DIR = path.join(__dirname, '../test_output')
+const FIXTURES_DIR = path.join(__dirname, '../test_fixtures')
 
 describe('AutoCleanBuildPlugin', function () {
   beforeEach(function (done) {
@@ -35,7 +34,7 @@ describe('AutoCleanBuildPlugin', function () {
   }
 
   const nominalWebpackConfig = {
-    entry: path.join(__dirname, 'fixtures/main.js'),
+    entry: path.join(FIXTURES_DIR, 'main.js'),
     output: {
       path: OUTPUT_DIR,
       filename: '[name]-[chunkhash].js'
@@ -57,7 +56,7 @@ describe('AutoCleanBuildPlugin', function () {
 
   it('should remove old hashed files', function (done) {
     // TODO: Implement!
-    // fse.copySync('test/fixtures/main-oldhash.js', path.join(OUTPUT_DIR, 'main-oldhash.js'))
+    // fse.copySync(path.join(FIXTURES_DIR, 'main-oldhash.js'), path.join(OUTPUT_DIR, 'main-oldhash.js'))
     assertWithWebpack(done, nominalWebpackConfig, nominalAssertions)
   })
 })

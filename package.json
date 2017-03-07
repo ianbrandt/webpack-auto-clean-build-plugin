@@ -3,14 +3,6 @@
   "version": "1.0.4-alpha.1",
   "description": "Automatically removes previous chunk output files if the filename is not same as the new output file name.",
   "main": "index.js",
-  "scripts": {
-    "clean-modules": "rm -rf node_modules/",
-    "install-modules": "npm install",
-    "check": "npm-check",
-    "update": "npm-check -u --save-exact --skip-unused",
-    "standard": "standard",
-    "test": "standard && mocha test"
-  },
   "repository": {
     "type": "git",
     "url": "github.com:aikar/webpack-auto-clean-build-plugin"
@@ -28,7 +20,23 @@
     "url": "https://github.com/aikar/webpack-auto-clean-build-plugin/issues"
   },
   "homepage": "https://github.com/aikar/webpack-auto-clean-build-plugin",
+  "dependencies": {
+    "fs-extra": "^2.0.0"
+  },
+  "scripts": {
+    "clean-modules": "rm -rf node_modules/",
+    "install-modules": "npm install",
+    "check": "npm-check",
+    "update": "npm-check -u --save-exact --skip-unused",
+    "lint": "standard 'src/**/*.js' 'test/**/*.js'",
+    "prebuild": "npm run lint",
+    "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
+    "pretest": "npm run build",
+    "test": "mocha test_dist/"
+  },
   "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-preset-es2015": "6.22.0",
     "chai": "3.5.0",
     "dirty-chai": "1.2.2",
     "eslint-config-standard": "7.0.0",
@@ -40,8 +48,5 @@
     "npm-check": "5.4.0",
     "standard": "9.0.0",
     "webpack": "2.2.1"
-  },
-  "dependencies": {
-    "fs-extra": "^2.0.0"
   }
 }

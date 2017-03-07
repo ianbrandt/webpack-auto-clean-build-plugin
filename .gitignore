@@ -1,22 +1,23 @@
+# Build Output
+/dist/
+/test_dist/
+
+# Test Output
+/test_output/
+
+# Node.js
+.npm
+.node_repl_history
+node_modules
+
 # Logs
 logs
 *.log
 npm-debug.log*
 
-# Test data
-tmp
-
-# Dependency directories
-node_modules
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
 # IntelliJ IDEA
-.idea/workspace.xml
-.idea/dictionaries
-.idea/compiler.xml
-.idea/uiDesigner.xml
+/.idea/workspace.xml
+/.idea/dictionaries
+
+# macOS
+.DS_Store
