@@ -2,17 +2,17 @@
 
 'use strict'
 
-var chai = require('chai')
-var dirtyChai = require('dirty-chai')
-var expect = require('chai').expect
-var fse = require('fs-extra')
-var path = require('path')
-var webpack = require('webpack')
+import chai from 'chai'
+import dirtyChai from 'dirty-chai'
+import fse from 'fs-extra'
+import path from 'path'
+import webpack from 'webpack'
+import AutoCleanBuildPlugin from '../index.js'
 
+const expect = chai.expect
 chai.use(dirtyChai)
 
-var AutoCleanBuildPlugin = require('../index.js')
-var OUTPUT_DIR = path.join(__dirname, '../tmp')
+const OUTPUT_DIR = path.join(__dirname, '../tmp')
 
 describe('AutoCleanBuildPlugin', function () {
   beforeEach(function (done) {
@@ -34,7 +34,7 @@ describe('AutoCleanBuildPlugin', function () {
     })
   }
 
-  var nominalWebpackConfig = {
+  const nominalWebpackConfig = {
     entry: path.join(__dirname, 'fixtures/main.js'),
     output: {
       path: OUTPUT_DIR,
@@ -46,7 +46,7 @@ describe('AutoCleanBuildPlugin', function () {
   }
 
   function nominalAssertions () {
-    var files = fse.readdirSync(OUTPUT_DIR)
+    const files = fse.readdirSync(OUTPUT_DIR)
     expect(files).to.have.lengthOf(1)
     expect(files[0]).to.match(/^main-.*\.js/)
   }
