@@ -30,6 +30,7 @@
     "clean-modules": "rimraf node_modules/",
     "install-typedefs": "typings install",
     "clean-typedefs": "rimraf typings/",
+    "setup": "npm run install-modules && npm run install-typedefs",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "prebuild": "npm run lint",
     "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
