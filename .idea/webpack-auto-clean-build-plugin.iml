@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/test_dist" />
+      <excludeFolder url="file://$MODULE_DIR$/dist_test" />
       <excludeFolder url="file://$MODULE_DIR$/test_output" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/typings" />

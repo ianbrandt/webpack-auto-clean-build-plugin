@@ -1,6 +1,6 @@
 # Build Output
 /dist/
-/test_dist/
+/dist_test/
 
 # Test Output
 /test_output/

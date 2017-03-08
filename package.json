@@ -33,10 +33,10 @@
     "setup": "npm run install-modules && npm run install-typedefs",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "prebuild": "npm run lint",
-    "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
+    "build": "babel src/ --out-dir dist/ --source-maps && babel test/ --out-dir dist_test/ --source-maps",
     "pretest": "npm run build",
-    "test": "mocha test_dist/",
-    "clean": "rimraf dist/ test_dist/ test_output"
+    "test": "mocha dist_test/",
+    "clean": "rimraf dist/ dist_test/ test_output"
   },
   "devDependencies": {
     "babel-cli": "6.23.0",

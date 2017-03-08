@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Project Test Source Files" pattern="file[webpack-auto-clean-build-plugin]:test//*" />
+</component>
