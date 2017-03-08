@@ -28,6 +28,8 @@
     "check-modules": "npm-check",
     "update-modules": "npm-check -u --save-exact --skip-unused",
     "clean-modules": "rimraf node_modules/",
+    "install-typings": "typings install",
+    "clean-typings": "rimraf typings/",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "prebuild": "npm run lint",
     "build": "babel src/ --out-dir dist/ && babel test/ --out-dir test_dist/",
@@ -47,6 +49,7 @@
     "npm-check": "5.4.0",
     "rimraf": "2.6.1",
     "standard": "9.0.1",
+    "typings": "2.1.0",
     "webpack": "2.2.1"
   }
 }

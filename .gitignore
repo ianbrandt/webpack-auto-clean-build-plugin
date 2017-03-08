@@ -10,6 +10,9 @@
 .node_repl_history
 node_modules
 
+# Typings
+/typings/
+
 # Logs
 logs
 *.log

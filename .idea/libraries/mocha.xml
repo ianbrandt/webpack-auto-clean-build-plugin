@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="mocha" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/typings/globals/mocha-node/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/typings/globals/mocha/index.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/typings/globals/mocha-node/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/typings/globals/mocha/index.d.ts" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
