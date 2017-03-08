@@ -7,21 +7,16 @@
  *
  */
 
-'use strict'
-
-/**
- * @constructor
- */
-function WebpackAutoCleanBuildPlugin () { }
-
-// noinspection JSUnusedGlobalSymbols
-WebpackAutoCleanBuildPlugin.prototype.apply = function (compiler) {
-  compiler.plugin('after-emit', function (compilation, callback) {
-    for (let filename in compilation.assets) {
-      console.log('[debug] ' + filename)
-    }
-    callback()
-  })
+export default function WebpackAutoCleanBuildPlugin () {
+  const apply = (compiler) => {
+    compiler.plugin('after-emit', (compilation, callback) => {
+      for (let filename in compilation.assets) {
+        console.log('[debug] ' + filename)
+      }
+      callback()
+    })
+  }
+  return {
+    apply
+  }
 }
-
-module.exports = WebpackAutoCleanBuildPlugin
