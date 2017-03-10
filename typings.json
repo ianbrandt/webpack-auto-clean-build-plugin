@@ -1,5 +1,5 @@
 {
-  "name": "webpack-auto-clean-build-plugin",
+  "name": "hash-clean-webpack-plugin",
   "dependencies": {},
   "globalDevDependencies": {
     "chai": "registry:dt/chai#3.4.0+20170217154556",

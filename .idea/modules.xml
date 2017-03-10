@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/webpack-auto-clean-build-plugin.iml" filepath="$PROJECT_DIR$/.idea/webpack-auto-clean-build-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hash-clean-webpack-plugin.iml" filepath="$PROJECT_DIR$/.idea/hash-clean-webpack-plugin.iml" />
     </modules>
   </component>
 </project>

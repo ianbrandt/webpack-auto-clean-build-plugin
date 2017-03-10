@@ -1,17 +1,19 @@
 {
-  "name": "webpack-auto-clean-build-plugin",
-  "version": "1.0.4-alpha.1",
+  "name": "hash-clean-webpack-plugin",
+  "version": "1.0.0-alpha.1",
   "description": "Automatically removes previous chunk output files if the filename is not same as the new output file name.",
-  "main": "index.js",
+  "main": "dist/hash-clean.js",
   "repository": {
     "type": "git",
     "url": "github.com:aikar/webpack-auto-clean-build-plugin"
   },
   "keywords": [
+    "hash",
+    "chunkhash",
+    "clean",
     "webpack",
     "plugin",
     "watch",
-    "clean",
     "build"
   ],
   "author": "Daniel Ennis <aikar@aikar.co>",
@@ -35,7 +37,7 @@
     "prebuild": "npm run lint",
     "build": "babel src/ --out-dir dist/ --source-maps && babel test/ --out-dir dist_test/ --source-maps",
     "pretest": "npm run build",
-    "test": "mocha dist_test/",
+    "test": "mocha 'dist_test/**/*.js'",
     "clean": "rimraf dist/ dist_test/ test_output"
   },
   "devDependencies": {
