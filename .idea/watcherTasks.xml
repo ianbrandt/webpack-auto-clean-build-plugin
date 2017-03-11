@@ -20,24 +20,5 @@
       <option name="workingDir" value="$ContentRoot$/src" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
-      <option name="arguments" value="$FilePathRelativeToSourcepath$ --out-dir $ContentRoot$/dist_test --source-maps" />
-      <option name="checkSyntaxErrors" value="true" />
-      <option name="description" />
-      <option name="exitCodeBehavior" value="ERROR" />
-      <option name="fileExtension" value="js" />
-      <option name="immediateSync" value="false" />
-      <option name="name" value="test" />
-      <option name="output" value="$ContentRoot$/dist_test/$FilePathRelativeToSourcepath$:$ContentRoot$/dist_test/$FilePathRelativeToSourcepath$.map" />
-      <option name="outputFilters">
-        <array />
-      </option>
-      <option name="outputFromStdout" value="false" />
-      <option name="program" value="$PROJECT_DIR$/node_modules/babel-cli/bin/babel.js" />
-      <option name="scopeName" value="Project Test Source Files" />
-      <option name="trackOnlyRoot" value="false" />
-      <option name="workingDir" value="$ContentRoot$/test" />
-      <envs />
-    </TaskOptions>
   </component>
 </project>

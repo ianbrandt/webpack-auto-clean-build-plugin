@@ -6,6 +6,7 @@
 export default function HashCleanWebpackPlugin () {
   const apply = (compiler) => {
     compiler.plugin('after-emit', (compilation, callback) => {
+      console.log('To Do!')
       callback()
     })
   }

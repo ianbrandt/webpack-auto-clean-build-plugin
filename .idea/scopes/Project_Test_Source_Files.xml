@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Project Test Source Files" pattern="file[hash-clean-webpack-plugin]:test//*" />
-</component>
