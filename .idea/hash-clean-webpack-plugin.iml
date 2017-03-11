@@ -21,5 +21,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="chai" level="project" />
+    <orderEntry type="library" name="mocha" level="project" />
   </component>
 </module>
