@@ -3,14 +3,11 @@
  *  http://aikar.co
  *  @license MIT
  */
-export default function HashCleanWebpackPlugin () {
-  const apply = (compiler) => {
+export default class HashCleanWebpackPlugin {
+  apply (compiler) {
     compiler.plugin('after-emit', (compilation, callback) => {
       console.log('To Do!')
       callback()
     })
-  }
-  return {
-    apply
   }
 }
